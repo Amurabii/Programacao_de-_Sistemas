@@ -1,0 +1,36 @@
+package prog1_atv1;
+
+import java.util.Scanner;
+
+public class Salva_vidas {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.printf("Digite a área: %n");
+		
+		double  R ,Área, pi = 3.1415;
+		
+		
+		R = sc.nextDouble();
+		Área = pi * (R * R );
+		
+		System.out.printf("O valor da área é : %.2f%n",Área);
+		
+		if(Área <= 1000){
+			System.out.println("Vai 1 Salva Vidas");
+		}
+		else if( Área <= 10000 ){
+			System.out.println("Vão 2 Salva Vidas");
+		}
+		else if ( Área <= 100000 ){
+			System.out.println("Vão 3 Salva Vidas");
+		}
+		else {
+			System.out.println("Vão 4 Salva Vidas");
+		}
+		
+		
+		sc.close();
+	}
+
+}	
