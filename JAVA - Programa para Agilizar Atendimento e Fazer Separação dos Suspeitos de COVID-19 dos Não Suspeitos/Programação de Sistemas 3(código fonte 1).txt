@@ -1,0 +1,199 @@
+package programação_de_sistemas_I;
+
+import java.util.Scanner;
+
+public class Controle_Fila {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);	
+		
+		System.out.println("Digite seu CPF: ");
+		int CPF = sc.nextInt();
+		System.out.println("Digite seu nome: ");
+		String Nome = sc.next();
+		System.out.println("Digite seu sexo: ");
+		char Sexo = sc.next().charAt(0);
+		System.out.println("Digite sua idade: ");
+		int Idade = sc.nextInt();
+		
+		
+		double febre = 5,dorDeCabeca = 1,secrecaoNasalOuEspirros = 1;
+		double dorOuIrritacaoGarganta = 1, tosseSeca = 3, dificuldadeRespirar = 10;
+		double doresNoCorpo = 1, diarreia = 1, contatoComAlguemComCovidUlt14Dias = 10;
+		double esteveEmLocaisComGrandeAglomeracao = 3;
+		char s = 'S';
+		char n = 'N';
+		double soma = 0;
+		
+		
+		System.out.println("Tem febre?");
+		char condição = sc.next().charAt(0);
+		
+		if(condição == 'S') {
+			soma =  soma + febre;
+		}else {
+				
+		}
+		
+		
+		System.out.println("Tem dor de cabeça?");
+		char condição1 = sc.next().charAt(0);
+		
+		if(condição1 == 'S') {
+			soma =  soma + dorDeCabeca;
+		}else {
+				
+		}
+		
+		
+		System.out.println("Tem secreção nasal ou espirros?");
+		char condição2 = sc.next().charAt(0);
+		
+		if(condição2 == 'S') {
+			soma =  soma + secrecaoNasalOuEspirros ;
+		}else {
+				
+		}
+		
+		
+		System.out.println("Tem dor/irritação na garganta?");
+		char condição3 = sc.next().charAt(0);
+		
+		if(condição3 == 'S') {
+			soma =  soma + dorOuIrritacaoGarganta ;
+		}else {
+			
+		}
+		
+		
+		System.out.println("Tem tosse seca?");
+		char condição4 = sc.next().charAt(0);
+		
+		if(condição4 == 'S') {
+			soma =  soma + tosseSeca ;
+		}else {
+				
+		}
+		
+		
+		System.out.println("Tem dificuldade respiratória?");
+		char condição5 = sc.next().charAt(0);
+		
+		if(condição5 == 'S') {
+			soma =  soma + dificuldadeRespirar ;
+		}else {
+				
+		}
+		
+		
+		System.out.println("Tem dores no corpo?");
+		char condição6 = sc.next().charAt(0);
+		
+		if(condição6 == 'S') {
+			soma =  soma + 	doresNoCorpo ;
+		}else {
+				
+		}
+	
+		
+		System.out.println("Tem diarreia?");
+		char condição7 = sc.next().charAt(0);
+		
+		if(condição7 == 'S') {
+			soma =  soma + 	diarreia ;
+		}else {
+				
+		}
+		
+		
+		System.out.println("Esteve em contato, nos últimos 14 dias, com um caso diagnosticado com COVID-19? ");
+		char condição8 = sc.next().charAt(0);
+		
+		if(condição8 == 'S') {
+			soma =  soma + 	contatoComAlguemComCovidUlt14Dias ;
+		}else {
+				
+		}
+		
+		
+		System.out.println("Esteve em locais com grande aglomeração?");
+		char condição9 = sc.next().charAt(0);
+		
+		if(condição9 == 'S') {
+			soma =  soma + 	esteveEmLocaisComGrandeAglomeracao ;
+		}else {
+				
+		}
+		
+		
+
+		double somaTotal = soma; 
+		System.out.println("A soma total deu: " + somaTotal);
+		
+		if(somaTotal <= 9) {
+			System.out.println("Vá para ala de Risco Baixo");
+		}else if(somaTotal <= 19) {
+			System.out.println("Vá para ala de Risco Médio");
+		}else {
+			System.out.println("Vá para ala de Risco Alto");
+		}
+		
+		System.out.println();
+		
+		Paciente[] listaPaciente = new Paciente[4];
+		Paciente p1 = new Paciente();
+		p1.setCPF(125784215);
+		p1.setNome("Barry Allen");
+		p1.setSexo('M');
+		p1.setIdade(36);
+		
+		Paciente p2 = new Paciente();
+		p2.setCPF(125445215);
+		p2.setNome("Jesse quick");
+		p2.setSexo('F');
+		p2.setIdade(26); 
+		
+		listaPaciente[0] = p1;
+		listaPaciente[1] = p2;
+		
+		for(int a = 0; a < 2; a ++) {
+			System.out.println(listaPaciente[a].getCPF());
+			System.out.println(listaPaciente[a].getNome());
+			System.out.println(listaPaciente[a].getSexo());
+			System.out.println(listaPaciente[a].getIdade());
+		}
+
+		String sair = "SAIR";
+		System.out.println("Digite seu CPF: ");
+		String CPF1 = sc.next();
+		
+		if(CPF1.equals(sair)) {
+			System.out.println("Encerrado");
+			
+		}
+		else {
+			
+			System.out.println("Digite seu nome: ");
+			String Nome1 = sc.next();
+			System.out.println("Digite seu sexo: ");
+			char Sexo1 = sc.next().charAt(0);
+			System.out.println("Digite sua idade: ");
+			int Idade1 = sc.nextInt();
+		}
+		
+			
+		sc.close();
+
+	}
+
+}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
